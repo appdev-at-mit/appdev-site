@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-appdev-teal: #96c2c5;
+  --color-appdev-blue: #7daaca;
+  --color-appdev-green: #a3bfa2;
+  --color-appdev-purple: #b796d9;
 }
 
 @media (prefers-color-scheme: dark) {

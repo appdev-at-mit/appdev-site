@@ -1,103 +1,169 @@
 import Image from "next/image";
+import Navbar from "./components/navbar";
+import AppWindow from "./components/appwindow";
+import Link from "next/link";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="bg-gray-100">
+      <Navbar />
+      <div className="mx-5 md:mx-10 lg:mx-30 pt-20 bg-gray-100 font-sans">
+        {/* HEADER */}
+        <div className="lg:flex justify-between border-l border-gray-200">
+          <div>
+            <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
+              &lt;div className="p-20 bg-gray-100 font-sans"&gt;
+            </p>
+            <hr className="text-gray-200" />
+            <h1 className="text-8xl mb-4 font-bold lowercase tracking-tight text-gray-800">
+              CULTIVATE SKILLS.
+              <br />
+              CREATE IMPACT.
+            </h1>
+            <h2 className="text-2xl mb-3 lowercase text-gray-700">
+              MIT'S FASTEST-GROWING SOFTWARE DEVELOPMENT COMMUNITY.
+            </h2>
+            <hr className="text-gray-200" />
+            <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
+              &lt;/div&gt;
+            </p>
+          </div>
+          <div className="hidden w-full lg:w-1/3 justify-center items-center relative sm:flex">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/fullclub2.jpg"
+              alt="Logo"
+              width={200}
+              height={200}
+              className="w-full border rounded-lg shadow-lg shadow-gray-200"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* interesting floating elements */}
+            <div className="absolute -top-0 -right-10 w-30 h-30 bg-appdev-purple/30 rounded-lg"></div>
+            <div className="absolute top-20 -left-20 w-40 h-40 bg-appdev-green/30 rounded-lg"></div>
+            <div className="absolute -bottom-0 right-10 w-20 h-20 bg-appdev-blue/30 rounded-lg"></div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* CONTENT SECTIONS */}
+        <div className="mt-20"></div>
+        <AppWindow>
+          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-blue">
+            what we do
+          </h2>
+          <p className="text-2xl mb-5">
+            Our mission is to foster a community of mobile and web developers,
+            providing members with opportunities to cultivate their skills
+            through impactful hands-on projects.
+          </p>
+        </AppWindow>
+        <div className="mt-20"></div>
+        <AppWindow>
+          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-green">
+            what we're building
+          </h2>
+          <p className="text-2xl mb-5">Some of the things we're working on.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="w-full">
+              <div className="flex justify-center mb-8">
+                <Image
+                  src="/mapit.png"
+                  alt="Mapit"
+                  width={375}
+                  height={250}
+                  className="rounded-lg border-1 border-gray-300"
+                />
+              </div>
+              <h4 className="text-xl font-semibold">MapIT</h4>
+              <p className="text-base font-light">
+                MapIT is a comprehensive campus map that helps you find your way
+                around MIT. It provides room-level search resolution, popular
+                locations pins, and an indoor navigation planner you won't find
+                anywhere else.
+              </p>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-center mb-8">
+                <Image
+                  src="/fullhouse.png"
+                  alt="Full House"
+                  width={375}
+                  height={250}
+                  className="rounded-lg border-1 border-gray-300"
+                />
+              </div>
+              <h4 className="text-xl font-semibold">Full House</h4>
+              <p className="text-base font-light">
+                Are you looking for summer housing near MIT or your internship?
+                This project will let you find affordable accommodations and
+                connect you with other MIT students living in the same area.
+              </p>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-center mb-8">
+                <Image
+                  src="/clubs.jpg"
+                  alt="Beaver Clubs"
+                  width={375}
+                  height={250}
+                  className="rounded-lg border-1 border-gray-300"
+                />
+              </div>
+              <h4 className="text-xl font-semibold">Beaver Clubs</h4>
+              <p className="text-base font-light">
+                There are too many clubs and organizations to keep track of.
+                Browse MIT's full list of clubs, and filter by club size, focus,
+                and recruiting status to find your fit.
+              </p>
+            </div>
+          </div>
+          <Link href="/products">
+            <button className="bg-appdev-green text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
+              See more projects
+            </button>
+          </Link>
+        </AppWindow>
+        <div className="mt-20"></div>
+        <AppWindow>
+          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-purple">
+            powered by
+          </h2>
+          <p className="text-2xl mb-5">
+            caffeine pills and our amazing sponsors.
+          </p>
+          <div className="flex flex-wrap justify-center items-center space-x-8 md:space-x-12">
+            <div>
+              <Link href="https://www.convex.dev/" target="_blank">
+                <Image
+                  src="/convex-logo.svg"
+                  alt="Convex Logo"
+                  width={350}
+                  height={200}
+                  className="mx-auto"
+                />
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="https://www.warp.dev/?utm_source=mit_fullstack&utm_medium=newsletter&utm_campaign=fullstack_20241107"
+                target="_blank"
+              >
+                <Image
+                  src="/warp-logo.png"
+                  alt="Warp Logo"
+                  width={230}
+                  height={200}
+                  className="mx-auto"
+                />
+              </Link>
+            </div>
+          </div>
+          <Link href="/products">
+            <button className="bg-appdev-purple text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
+              Support us!
+            </button>
+          </Link>
+        </AppWindow>
+        <Footer />
+      </div>
     </div>
   );
 }
