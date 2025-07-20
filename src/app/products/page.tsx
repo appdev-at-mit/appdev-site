@@ -24,7 +24,7 @@ export default function ProductsPage() {
               around campus, and so much more. Each app is inspired by a problem
               we've seen in the world and are motivated to solve.
             </p>
-                        <hr className="text-gray-200" />
+            <hr className="text-gray-200" />
             <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
               &lt;/div&gt;
             </p>
@@ -48,8 +48,8 @@ export default function ProductsPage() {
         {featuredProjects.map((project) => (
           <div key={project.title}>
             <AppWindow>
-              <div className="flex justify-center mb-5">
-                <div className="w-full lg:w-1/2 p-5">
+              <div className="md:flex justify-center mb-5">
+                <div className="w-full lg:w-1/2 mb-5 md:pr-5">
                   <h3 className="text-3xl font-semibold mb-3">
                     {project.title}
                   </h3>

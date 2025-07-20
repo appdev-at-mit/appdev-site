@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 text-gray-800">
       <Navbar />
       <div className="mx-5 md:mx-10 lg:mx-30 pt-20 bg-gray-100 font-sans">
         {/* HEADER */}
@@ -16,7 +16,7 @@ export default function Home() {
               &lt;div className="p-20 bg-gray-100 font-sans"&gt;
             </p>
             <hr className="text-gray-200" />
-            <h1 className="text-8xl mb-4 font-bold lowercase tracking-tight text-gray-800">
+            <h1 className="text-6xl md:text-8xl mb-4 font-bold lowercase tracking-tight text-gray-800">
               CULTIVATE SKILLS.
               <br />
               CREATE IMPACT.
@@ -46,7 +46,7 @@ export default function Home() {
         {/* CONTENT SECTIONS */}
         <div className="mt-20"></div>
         <AppWindow>
-          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-blue">
+          <h2 className="text-4xl md:text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-blue">
             what we do
           </h2>
           <p className="text-2xl mb-5">
@@ -57,7 +57,7 @@ export default function Home() {
         </AppWindow>
         <div className="mt-20"></div>
         <AppWindow>
-          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-green">
+          <h2 className="text-4xl md:text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-green">
             what we're building
           </h2>
           <p className="text-2xl mb-5">Some of the things we're working on.</p>
@@ -115,7 +115,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Link href="/products">
+          <Link href="/products" className="flex justify-center mt-10">
             <button className="bg-appdev-green text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               See more projects
             </button>
@@ -123,7 +123,7 @@ export default function Home() {
         </AppWindow>
         <div className="mt-20"></div>
         <AppWindow>
-          <h2 className="text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-purple">
+          <h2 className="text-4xl md:text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-purple">
             powered by
           </h2>
           <p className="text-2xl mb-5">
@@ -156,7 +156,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Link href="/products">
+          <Link href="/products" className="flex justify-center mt-10">
             <button className="bg-appdev-purple text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               Support us!
             </button>

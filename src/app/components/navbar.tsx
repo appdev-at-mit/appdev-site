@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +16,7 @@ export default function Navbar() {
             className="inline-block mr-2 saturate-50"
           />
         </Link>
-        <div className="space-x-4 flex items-center">
+        <div className="hidden space-x-4 md:flex items-center">
           <a href="/team" className="text-gray-500 hover:text-gray-800">
             Team
           </a>
@@ -28,6 +30,40 @@ export default function Navbar() {
             Apply
           </a>
         </div>
+        <div className="md:hidden flex items-center">
+          <button className="text-gray-500 hover:text-gray-800 focus:outline-none" onClick={() => {
+            document.querySelector('.mobile-menu')?.classList.toggle('hidden');
+          }}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div className="mobile-menu md:hidden mt-2 hidden">
+        <Link href="/team" className="block text-gray-500 hover:text-gray-800 py-2">
+          Team
+        </Link>
+        <Link href="/products" className="block text-gray-500 hover:text-gray-800 py-2">
+          Products
+        </Link>
+        <Link
+          href="/apply"
+          className="text-gray-500 hover:text-gray-800"
+        >
+          Apply
+        </Link>
       </div>
     </nav>
   );
