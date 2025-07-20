@@ -12,10 +12,10 @@ export default function Footer() {
           © {new Date().getFullYear()} All rights reserved.
         </span>
       </p>
-                  <hr className="text-gray-200" />
-            <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
-              &lt;/footer&gt;
-            </p>
+      <hr className="text-gray-200" />
+      <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
+        &lt;/footer&gt;
+      </p>
     </footer>
   );
 }

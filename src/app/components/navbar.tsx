@@ -31,9 +31,14 @@ export default function Navbar() {
           </a>
         </div>
         <div className="md:hidden flex items-center">
-          <button className="text-gray-500 hover:text-gray-800 focus:outline-none" onClick={() => {
-            document.querySelector('.mobile-menu')?.classList.toggle('hidden');
-          }}>
+          <button
+            className="text-gray-500 hover:text-gray-800 focus:outline-none"
+            onClick={() => {
+              document
+                .querySelector(".mobile-menu")
+                ?.classList.toggle("hidden");
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -52,16 +57,20 @@ export default function Navbar() {
         </div>
       </div>
       <div className="mobile-menu md:hidden mt-2 hidden">
-        <Link href="/team" className="block text-gray-500 hover:text-gray-800 py-2">
+        <Link
+          href="/team"
+          className="block text-gray-500 hover:text-gray-800 py-2"
+        >
           Team
         </Link>
-        <Link href="/products" className="block text-gray-500 hover:text-gray-800 py-2">
+        <Link
+          href="/products"
+          className="block text-gray-500 hover:text-gray-800 py-2"
+        >
           Products
         </Link>
-        <Link
-          href="/apply"
-          className="text-gray-500 hover:text-gray-800"
-        >
+        <Link href="/apply"
+          className="block text-gray-500 hover:text-gray-800 py-2">
           Apply
         </Link>
       </div>
