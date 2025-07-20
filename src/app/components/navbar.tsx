@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-100/80 font-sans text-xl px-30 py-4 sticky top-0 z-50 border-b border-gray-400 backdrop-blur-md">
+    <nav className="bg-gray-100/80 font-sans text-xl px-5 md:px-10 lg:px-30 py-4 sticky top-0 z-50 border-b border-gray-400 backdrop-blur-md">
       <div className="flex justify-between">
         <Link href="/">
           <Image

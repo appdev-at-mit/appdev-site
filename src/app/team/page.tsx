@@ -28,7 +28,7 @@ export default function TeamPage() {
               opportunity to develop their technical and soft skills through
               practical projects that have real impact.
             </p>
-                        <hr className="text-gray-200" />
+            <hr className="text-gray-200" />
             <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
               &lt;/div&gt;
             </p>
