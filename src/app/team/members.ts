@@ -28,13 +28,13 @@ const exec: TeamMember[] = [
     name: "An Dinh",
     roles: ["Team Lead", "Backend Engineer", "Frontend Engineer"],
     year: "2027",
-    imageSrc: "/people/temp-pic.jpg",
+    imageSrc: "/people/an_dinh.jpeg",
   },
   {
     name: "Samantha Shih",
     roles: ["Team Lead", "Frontend Engineer"],
     year: "2027",
-    imageSrc: "/people/temp-pic.jpg",
+    imageSrc: "/people/samantha_shih.jpg",
   },
   {
     name: "Hailey Pan",
