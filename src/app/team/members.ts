@@ -39,7 +39,7 @@ const exec: TeamMember[] = [
   {
     name: "Hailey Pan",
     roles: ["Advisor"],
-    year: "2028",
+    year: "2027",
     imageSrc: "/people/hailey-pan.jpg",
   },
 ];
