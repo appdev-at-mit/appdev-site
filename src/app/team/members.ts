@@ -25,16 +25,22 @@ const exec: TeamMember[] = [
     imageSrc: "/people/rebecca-xiong.jpg",
   },
   {
+    name: "Jieruei Chang",
+    roles: ["Webmaster", "Team Lead", "Backend Engineer", "Frontend Engineer"],
+    year: "2028",
+    imageSrc: "/people/jieruei-chang.png",
+  },
+  {
     name: "An Dinh",
     roles: ["Team Lead", "Backend Engineer", "Frontend Engineer"],
     year: "2027",
-    imageSrc: "/people/an_dinh.jpeg",
+    imageSrc: "/people/an-dinh.jpeg",
   },
   {
     name: "Samantha Shih",
     roles: ["Team Lead", "Frontend Engineer"],
-    year: "2027",
-    imageSrc: "/people/samantha_shih.jpg",
+    year: "2028",
+    imageSrc: "/people/samantha-shih.jpg",
   },
   {
     name: "Hailey Pan",
@@ -57,7 +63,6 @@ const developers: string[] = [
   "Jack MarionSims",
   "Jennet Zamanova",
   "Jensen Coonradt",
-  "Jieruei Chang",
   "Jity Woldemichael",
   "Jocelyn Zhao",
   "Jocelyn Zheng",
