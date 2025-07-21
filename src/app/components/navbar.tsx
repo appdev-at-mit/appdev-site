@@ -16,7 +16,7 @@ export default function Navbar() {
             className="inline-block mr-2 saturate-50"
           />
         </Link>
-        <div className="hidden space-x-4 md:flex items-center">
+        <div className="hidden space-x-8 md:flex items-center">
           <a href="/team" className="text-gray-500 hover:text-gray-800">
             Team
           </a>
