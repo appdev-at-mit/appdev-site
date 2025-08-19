@@ -111,11 +111,20 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-blue">
             what we do
           </h2>
-          <p className="text-2xl mb-5">
-            Our mission is to foster a community of mobile and web developers,
-            providing members with opportunities to cultivate their skills
-            through impactful hands-on projects.
+          <p className="text-2xl mb-3">
+            Our mission is to build web and mobile applications with the goal
+            of:
           </p>
+          <ul className="list-decimal list-inside text-2xl mb-5 space-y-1">
+            <li>
+              Serving students, campus groups, and local businesses and
+              organizations.
+            </li>
+            <li>
+              Fostering practical skills in software development, product
+              management, design, and marketing.
+            </li>
+          </ul>
         </AppWindow>
         <div className="mt-20"></div>
         <AppWindow>
