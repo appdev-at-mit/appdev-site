@@ -1,8 +1,70 @@
+'use client';
+
 import Image from "next/image";
 import Navbar from "./components/navbar";
 import AppWindow from "./components/appwindow";
 import Link from "next/link";
 import Footer from "./components/footer";
+import Badges from "./components/badges";
+import { useEffect, useState } from "react";
+
+export function BlogComponent() {
+  const API_URL = "https://appdev-blog.vercel.app/api";
+  type Author = {
+    id: string;
+    name: string;
+  };
+  type Post = {
+    id: string;
+    title: string;
+    author: Author;
+    date: string;
+    tags: string[];
+    content: string;
+    image?: string;
+    excerpt?: string;
+    important?: boolean;
+  };
+  const [posts, setPosts] = useState<Post[]>([]);
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch(
+          API_URL
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch posts:", error);
+      }
+    }
+    fetchPosts();
+  }, []);
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map((post, index) => (
+        <Link
+          href={`https://appdev-blog.vercel.app/posts/${post.id}`}
+          key={post.id}
+          className={post.important ? "col-span-1 md:col-span-2" : ""}
+        >
+          <AppWindow color={(index % 5) + 1}>
+            <h2 className="text-2xl font-bold">{post.title}</h2>
+            <p className="font-mono uppercase text-sm pb-3">
+              {post.author.name} |{" "}
+              {new Date(post.date).toLocaleDateString()}
+            </p>
+            {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
+            <Badges tags={post.tags} color={(index % 5) + 1} />
+          </AppWindow>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -118,6 +180,21 @@ export default function Home() {
           <Link href="/products" className="flex justify-center mt-10">
             <button className="bg-appdev-green text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               See more projects
+            </button>
+          </Link>
+        </AppWindow>
+        <div className="mt-20"></div>
+        <AppWindow>
+          <h2 className="text-4xl md:text-6xl mt-10 mb-5 font-bold tracking-tight text-appdev-teal">
+            news and ramblings
+          </h2>
+          <p className="text-2xl mb-10">
+            annoucements, updates, and stories from our members.
+          </p>
+          <BlogComponent />
+          <Link href="https://appdev-blog.vercel.app" className="flex justify-center mt-10">
+            <button className="bg-appdev-teal text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
+              Read our blog
             </button>
           </Link>
         </AppWindow>
