@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 import Badges from "./components/badges";
 import { useEffect, useState } from "react";
 
-export function BlogComponent() {
+function BlogComponent() {
   const API_URL = "https://appdev-blog.vercel.app/api";
   type Author = {
     id: string;
