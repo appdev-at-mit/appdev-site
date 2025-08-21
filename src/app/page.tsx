@@ -198,7 +198,7 @@ export default function Home() {
             news and ramblings
           </h2>
           <p className="text-2xl mb-10">
-            annoucements, updates, and stories from our members.
+            announcements, updates, and stories from our members.
           </p>
           <BlogComponent />
           <Link href="https://appdev-blog.vercel.app" className="flex justify-center mt-10">
