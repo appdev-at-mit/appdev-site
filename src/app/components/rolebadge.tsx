@@ -6,6 +6,8 @@ const getRoleColor = (role: string): string => {
       return "bg-[#F7BEC2] text-gray-100";
     case "Finance Chair":
       return "bg-[#D2CCED] text-gray-800";
+    case "Outreach Chair":
+      return "bg-[#c1cff5] text-gray-800";
     case "Webmaster":
       return "bg-[#e39a62] text-gray-100";
     case "Team Lead":

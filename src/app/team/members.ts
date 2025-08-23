@@ -31,6 +31,12 @@ const exec: TeamMember[] = [
     imageSrc: "/people/jieruei-chang.png",
   },
   {
+    name: "Laurie Wang",
+    roles: ["Outreach Chair", "Business/Marketing"],
+    year: "2028",
+    imageSrc: "/people/laurie-wang.png",
+  },
+  {
     name: "An Dinh",
     roles: ["Team Lead", "Backend Engineer", "Frontend Engineer"],
     year: "2027",
