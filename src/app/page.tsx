@@ -172,13 +172,13 @@ export default function Home() {
               <div className="flex justify-center mb-8">
                 <Image
                   src="/clubs.jpg"
-                  alt="Beaver Clubs"
+                  alt="MIT Clubs"
                   width={375}
                   height={250}
                   className="rounded-lg border-1 border-gray-300"
                 />
               </div>
-              <h4 className="text-xl font-semibold">Beaver Clubs</h4>
+              <h4 className="text-xl font-semibold">MIT Clubs</h4>
               <p className="text-base font-light">
                 There are too many clubs and organizations to keep track of.
                 Browse MIT's full list of clubs, and filter by club size, focus,
