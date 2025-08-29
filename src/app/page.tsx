@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Navbar from "./components/navbar";
@@ -29,9 +29,7 @@ function BlogComponent() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch(
-          API_URL
-        );
+        const response = await fetch(API_URL);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -54,8 +52,7 @@ function BlogComponent() {
           <AppWindow color={(index % 5) + 1}>
             <h2 className="text-2xl font-bold">{post.title}</h2>
             <p className="font-mono uppercase text-sm pb-3">
-              {post.author.name} |{" "}
-              {new Date(post.date).toLocaleDateString()}
+              {post.author.name} | {new Date(post.date).toLocaleDateString()}
             </p>
             {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
             <Badges tags={post.tags} color={(index % 5) + 1} />
@@ -135,13 +132,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="w-full">
               <div className="flex justify-center mb-8">
-                <Image
-                  src="/mapit.png"
-                  alt="Mapit"
-                  width={375}
-                  height={250}
-                  className="rounded-lg border-1 border-gray-300"
-                />
+                <Link
+                  href="https://mitmapit.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/mapit.png"
+                    alt="Mapit"
+                    width={375}
+                    height={250}
+                    className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                </Link>
               </div>
               <h4 className="text-xl font-semibold">MapIT</h4>
               <p className="text-base font-light">
@@ -201,7 +204,10 @@ export default function Home() {
             announcements, updates, and stories from our members.
           </p>
           <BlogComponent />
-          <Link href="https://appdev-blog.vercel.app" className="flex justify-center mt-10">
+          <Link
+            href="https://appdev-blog.vercel.app"
+            className="flex justify-center mt-10"
+          >
             <button className="bg-appdev-teal text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               Read our blog
             </button>

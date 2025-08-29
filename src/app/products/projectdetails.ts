@@ -3,7 +3,7 @@ export const featuredProjects = [
     title: "MapIT",
     description:
       "A comprehensive navigation tool designed to help you explore and discover MIT's campus with ease.",
-    link: "",
+    link: "https://mitmapit.org",
     imageUrl: "/mapit.png",
     team: "Alexander Liang, Bhadra Rupesh, Eric Zhan, Grant Hu, Hailey Pan, Jieruei Chang, Jocelyn Zheng, Kao Anchaleenukoon, Samantha Shih",
   },

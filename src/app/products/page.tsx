@@ -3,6 +3,7 @@ import Footer from "@/app/components/footer";
 import AppWindow from "@/app/components/appwindow";
 import { featuredProjects } from "./projectdetails";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductsPage() {
   return (
@@ -54,7 +55,18 @@ export default function ProductsPage() {
                     {project.title}
                   </h3>
                   <p className="text-xl mb-5">{project.description}</p>
-                  <p className="text-xl text-gray-500">{project.team}</p>
+                  <p className="text-xl text-gray-500 mb-5">{project.team}</p>
+                  {project.link && (
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-appdev-blue text-white text-lg cursor-pointer hover:brightness-110 px-6 py-2 rounded-full">
+                        Try it out!
+                      </button>
+                    </Link>
+                  )}
                 </div>
                 <div className="w-full lg:w-1/2 justify-center items-center">
                   <Image
