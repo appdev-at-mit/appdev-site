@@ -49,14 +49,16 @@ function BlogComponent() {
           key={post.id}
           className={post.important ? "col-span-1 md:col-span-2" : ""}
         >
-          <AppWindow color={(index % 5) + 1}>
-            <h2 className="text-2xl font-bold">{post.title}</h2>
-            <p className="font-mono uppercase text-sm pb-3">
-              {post.author.name} | {new Date(post.date).toLocaleDateString()}
-            </p>
-            {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
-            <Badges tags={post.tags} color={(index % 5) + 1} />
-          </AppWindow>
+          <div className="hover:opacity-80 transition-opacity h-full">
+            <AppWindow color={(index % 5) + 1}>
+              <h2 className="text-2xl font-bold">{post.title}</h2>
+              <p className="font-mono uppercase text-sm pb-3">
+                {post.author.name} | {new Date(post.date).toLocaleDateString()}
+              </p>
+              {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
+              <Badges tags={post.tags} color={(index % 5) + 1} />
+            </AppWindow>
+          </div>
         </Link>
       ))}
     </div>
