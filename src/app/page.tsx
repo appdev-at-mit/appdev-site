@@ -175,13 +175,19 @@ export default function Home() {
             </div>
             <div className="w-full">
               <div className="flex justify-center mb-8">
-                <Image
-                  src="/clubs.jpg"
-                  alt="MIT Clubs"
-                  width={375}
-                  height={250}
-                  className="rounded-lg border-1 border-gray-300"
-                />
+                <Link
+                  href="https://mitclubs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/clubs.jpg"
+                    alt="MIT Clubs"
+                    width={375}
+                    height={250}
+                    className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                </Link>
               </div>
               <h4 className="text-xl font-semibold">MIT Clubs</h4>
               <p className="text-base font-light">

@@ -19,7 +19,7 @@ export const featuredProjects = [
     title: "MIT Clubs",
     description:
       "There are too many clubs and organizations to keep track of. Browse MIT's full list of clubs, and filter by club size, focus, and recruiting status to find your fit.",
-    link: "",
+    link: "https://mitclubs.com/",
     imageUrl: "/clubs.jpg",
     team: "An Dinh, Anna Li, Bhadra Rupesh, Hailey Pan, Justin Le, Srilekha Mamidala, Victoria Park, Kara Chou, Samantha Shih",
   },
