@@ -31,10 +31,28 @@ const exec: TeamMember[] = [
     imageSrc: "/people/jieruei-chang.png",
   },
   {
-    name: "Laurie Wang",
-    roles: ["Outreach Chair", "Business/Marketing"],
-    year: "2028",
-    imageSrc: "/people/laurie-wang.png",
+    name: "Michelle Han",
+    roles: ["Outreach Chair"],
+    year: "2029",
+    imageSrc: "/people/michelle-han.jpg",
+  },
+  {
+    name: "Sanchali Banerjee",
+    roles: ["Events Chair"],
+    year: "2029",
+    imageSrc: "/people/sanchali-banerjee.jpeg",
+  },
+  {
+    name: "Leena Dudi",
+    roles: ["Marketing Chair"],
+    year: "2029",
+    imageSrc: "/people/leena-dudi.png",
+  },
+  {
+    name: "Nicole Zheng",
+    roles: ["Marketing Chair"],
+    year: "2029",
+    imageSrc: "/people/nicole-zheng.jpg",
   },
   {
     name: "An Dinh",
@@ -47,6 +65,12 @@ const exec: TeamMember[] = [
     roles: ["Team Lead", "Frontend Engineer"],
     year: "2028",
     imageSrc: "/people/samantha-shih.jpg",
+  },
+  {
+    name: "Bridget Jiang",
+    roles: ["Team Lead"],
+    year: "2028",
+    imageSrc: "/people/bridget-jiang.jpg",
   },
   {
     name: "Hailey Pan",
