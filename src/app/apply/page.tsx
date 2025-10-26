@@ -1,6 +1,13 @@
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import AppWindow from "@/app/components/appwindow";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Apply to AppDev",
+  description:
+    "Join MIT's fastest-growing web and mobile app development club. Applications open each semester for students of all skill levels.",
+};
 
 export default function ApplyPage() {
   return (

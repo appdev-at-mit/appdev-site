@@ -10,7 +10,7 @@ export default function Navbar() {
         <Link href="/">
           <Image
             src="/logo-cropped.svg"
-            alt="Logo"
+            alt="AppDev@MIT logo - MIT's premier web and mobile app development club"
             width={200}
             height={120}
             className="inline-block mr-2 saturate-50"

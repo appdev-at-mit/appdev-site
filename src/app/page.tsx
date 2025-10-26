@@ -93,7 +93,7 @@ export default function Home() {
           <div className="hidden w-full lg:w-1/3 justify-center items-center relative sm:flex">
             <Image
               src="/fullclub2.jpg"
-              alt="Logo"
+              alt="AppDev@MIT team members at demo day"
               width={200}
               height={200}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
@@ -141,7 +141,7 @@ export default function Home() {
                 >
                   <Image
                     src="/mapit.png"
-                    alt="Mapit"
+                    alt="MapIT - MIT campus navigation app interface showing room locations"
                     width={375}
                     height={250}
                     className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="flex justify-center mb-8">
                 <Image
                   src="/fullhouse.png"
-                  alt="Full House"
+                  alt="Full House - MIT student housing and roommate finder application interface"
                   width={375}
                   height={250}
                   className="rounded-lg border-1 border-gray-300"
@@ -182,7 +182,7 @@ export default function Home() {
                 >
                   <Image
                     src="/clubs.jpg"
-                    alt="MIT Clubs"
+                    alt="MIT Clubs - browse and filter student organizations interface"
                     width={375}
                     height={250}
                     className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
@@ -191,9 +191,10 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-semibold">MIT Clubs</h4>
               <p className="text-base font-light">
-                There are too many clubs and organizations to keep track of.
-                Browse MIT's full list of clubs, and filter by club size, focus,
-                and recruiting status to find your fit.
+                There are too many clubs and organizations to keep track of. MIT
+                Clubs is a directory of all MIT clubs and organizations, with
+                information about each club's focus, recruiting cycle, and
+                recruiting status.
               </p>
             </div>
           </div>
@@ -234,7 +235,7 @@ export default function Home() {
               <Link href="https://www.convex.dev/" target="_blank">
                 <Image
                   src="/convex-logo.svg"
-                  alt="Convex Logo"
+                  alt="Convex - AppDev@MIT sponsor and real-time database platform"
                   width={350}
                   height={200}
                   className="mx-auto"
@@ -248,7 +249,7 @@ export default function Home() {
               >
                 <Image
                   src="/warp-logo.png"
-                  alt="Warp Logo"
+                  alt="Warp - AppDev@MIT sponsor and AI-powered terminal"
                   width={230}
                   height={200}
                   className="mx-auto"

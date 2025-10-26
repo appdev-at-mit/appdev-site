@@ -9,6 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 import App from "next/app";
 import { useState } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Meet the Team",
+  description:
+    "Meet the team of software engineers, UI/UX designers, and product managers at AppDev@MIT.",
+};
 
 export default function TeamPage() {
   const [openAlumni, setOpenAlumni] = useState<string | null>(null);
@@ -47,7 +54,7 @@ relative sm:flex"
           >
             <Image
               src="/social.jpg"
-              alt="Team"
+              alt="AppDev@MIT team at social event - diverse group of engineers and designers"
               width={400}
               height={400}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
@@ -65,7 +72,9 @@ relative sm:flex"
             <AppWindow key={member.name}>
               <Image
                 src={member.imageSrc}
-                alt={member.name}
+                alt={`${member.name} - AppDev@MIT ${member.roles.join(
+                  " and "
+                )} member`}
                 width={200}
                 height={200}
                 className="rounded-full mx-auto mb-4"
