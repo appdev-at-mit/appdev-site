@@ -6,6 +6,11 @@ export const metadata: Metadata = {
     "Meet the team of software engineers, web and mobile app developers, UI/UX designers, and product managers at AppDev@MIT.",
   keywords: [
     "mit app dev",
+    "mit app dev team",
+    "mit app dev members",
+    "mit app dev executive board",
+    "mit web dev club",
+    "mit app dev club",
     "mit web development club",
     "mit app development club",
     "mit mobile app club",
@@ -15,8 +20,6 @@ export const metadata: Metadata = {
     "mit software student organization",
     "mit software club",
     "mit full stack club",
-    "mit app dev team",
-    "mit app dev members",
   ],
 };
 

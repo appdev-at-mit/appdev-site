@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     "MIT's fastest-growing software development student organization. Building web and mobile applications to serve students, campus groups, and local businesses while fostering practical skills in full-stack development.",
   keywords: [
     "mit app dev",
+    "mit web dev club",
+    "mit app dev club",
     "mit web development club",
     "mit app development club",
     "mit mobile app club",

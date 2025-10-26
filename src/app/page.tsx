@@ -51,7 +51,7 @@ function BlogComponent() {
         >
           <div className="hover:opacity-80 transition-opacity h-full">
             <AppWindow color={(index % 5) + 1}>
-              <h2 className="text-2xl font-bold">{post.title}</h2>
+              <h3 className="text-2xl font-bold">{post.title}</h3>
               <p className="font-mono uppercase text-sm pb-3">
                 {post.author.name} | {new Date(post.date).toLocaleDateString()}
               </p>
@@ -82,9 +82,9 @@ export default function Home() {
               <br />
               CREATE IMPACT.
             </h1>
-            <h2 className="text-2xl mb-3 lowercase text-gray-700">
+            <p className="text-2xl mb-3 lowercase text-gray-700">
               MIT'S FASTEST-GROWING SOFTWARE DEVELOPMENT COMMUNITY.
-            </h2>
+            </p>
             <hr className="text-gray-200" />
             <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
               &lt;/div&gt;
@@ -111,8 +111,7 @@ export default function Home() {
             what we do
           </h2>
           <p className="text-2xl mb-3">
-            Our mission is to build web and mobile applications with the goal
-            of:
+            Our mission is to build web and mobile apps with the goal of:
           </p>
           <ul className="list-decimal list-inside text-2xl mb-5 space-y-1">
             <li>
@@ -120,8 +119,8 @@ export default function Home() {
               organizations.
             </li>
             <li>
-              Fostering practical skills in software development, product
-              management, design, and marketing.
+              Fostering practical skills in software engineering, product
+              management, UI/UX design, and marketing.
             </li>
           </ul>
         </AppWindow>
@@ -148,7 +147,7 @@ export default function Home() {
                   />
                 </Link>
               </div>
-              <h4 className="text-xl font-semibold">MapIT</h4>
+              <h3 className="text-xl font-semibold">MapIT</h3>
               <p className="text-base font-light">
                 MapIT is a comprehensive campus map that helps you find your way
                 around MIT. It provides room-level search resolution, popular
@@ -166,7 +165,7 @@ export default function Home() {
                   className="rounded-lg border-1 border-gray-300"
                 />
               </div>
-              <h4 className="text-xl font-semibold">Full House</h4>
+              <h3 className="text-xl font-semibold">Full House</h3>
               <p className="text-base font-light">
                 Are you looking for summer housing near MIT or your internship?
                 This project will let you find affordable accommodations and
@@ -189,7 +188,7 @@ export default function Home() {
                   />
                 </Link>
               </div>
-              <h4 className="text-xl font-semibold">MIT Clubs</h4>
+              <h3 className="text-xl font-semibold">MIT Clubs</h3>
               <p className="text-base font-light">
                 There are too many clubs and organizations to keep track of. MIT
                 Clubs is a directory of all MIT clubs and organizations, with
@@ -210,7 +209,7 @@ export default function Home() {
             news and ramblings
           </h2>
           <p className="text-2xl mb-10">
-            announcements, updates, and stories from our members.
+            announcements, updates, and stories from our <Link href="/team" className="text-appdev-teal hover:underline">members</Link>.
           </p>
           <BlogComponent />
           <Link
