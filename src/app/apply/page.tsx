@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Apply to AppDev",
   description:
     "Join MIT's fastest-growing web and mobile app development club. Applications open each semester for students of all skill levels.",
+  keywords: [
+    "mit app dev application",
+    "apply mit app dev",
+    "join mit app development",
+    "mit programming club application",
+    "mit coding club recruitment",
+    "mit software club join",
+  ],
 };
 
 export default function ApplyPage() {

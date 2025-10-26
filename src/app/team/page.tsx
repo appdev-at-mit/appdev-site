@@ -7,15 +7,7 @@ import AppWindow from "../components/appwindow";
 import RoleBadges from "../components/rolebadge";
 import Image from "next/image";
 import Link from "next/link";
-import App from "next/app";
 import { useState } from "react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Meet the Team",
-  description:
-    "Meet the team of software engineers, UI/UX designers, and product managers at AppDev@MIT.",
-};
 
 export default function TeamPage() {
   const [openAlumni, setOpenAlumni] = useState<string | null>(null);
