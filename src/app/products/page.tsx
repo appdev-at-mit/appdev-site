@@ -3,6 +3,30 @@ import Footer from "@/app/components/footer";
 import AppWindow from "@/app/components/appwindow";
 import { featuredProjects } from "./projectdetails";
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Products",
+  description:
+    "Explore the web and mobile applications built by AppDev@MIT, including MapIT, Full House, and MIT Clubs.",
+  keywords: [
+    "mit mapit",
+    "mit clubs",
+    "mit full house",
+    "mit campus map",
+    "mit campus navigation",
+    "mit clubs list",
+    "mit list of clubs",
+    "mit student organizations",
+    "mit clubs directory",
+    "mit clubs database",
+    "mit club directory",
+    "mit club database",
+    "mit housing finder",
+    "mit summer housing",
+  ],
+};
 
 export default function ProductsPage() {
   return (
@@ -32,7 +56,7 @@ export default function ProductsPage() {
           <div className="hidden w-full lg:w-1/2 justify-center items-center relative sm:flex">
             <Image
               src="/presenter.jpg"
-              alt="Products"
+              alt="AppDev@MIT member presenting innovative product to audience"
               width={200}
               height={200}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
@@ -54,12 +78,26 @@ export default function ProductsPage() {
                     {project.title}
                   </h3>
                   <p className="text-xl mb-5">{project.description}</p>
-                  <p className="text-xl text-gray-500">{project.team}</p>
+                  <p className="text-xl text-gray-500 mb-5">{project.team}</p>
+                  {project.link && (
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-appdev-blue text-white text-lg cursor-pointer hover:brightness-110 px-6 py-2 rounded-full">
+                        Try it out!
+                      </button>
+                    </Link>
+                  )}
                 </div>
                 <div className="w-full lg:w-1/2 justify-center items-center">
                   <Image
                     src={project.imageUrl}
-                    alt={project.title}
+                    alt={`${project.title} - ${project.description.substring(
+                      0,
+                      100
+                    )}...`}
                     width={400}
                     height={400}
                     className="rounded-lg border-1 border-gray-300 w-full"

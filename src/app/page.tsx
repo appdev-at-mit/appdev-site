@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Navbar from "./components/navbar";
@@ -29,9 +29,7 @@ function BlogComponent() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch(
-          API_URL
-        );
+        const response = await fetch(API_URL);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -45,21 +43,22 @@ function BlogComponent() {
   }, []);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {posts.map((post, index) => (
+      {posts.slice(0, 3).map((post, index) => (
         <Link
           href={`https://appdev-blog.vercel.app/posts/${post.id}`}
           key={post.id}
           className={post.important ? "col-span-1 md:col-span-2" : ""}
         >
-          <AppWindow color={(index % 5) + 1}>
-            <h2 className="text-2xl font-bold">{post.title}</h2>
-            <p className="font-mono uppercase text-sm pb-3">
-              {post.author.name} |{" "}
-              {new Date(post.date).toLocaleDateString()}
-            </p>
-            {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
-            <Badges tags={post.tags} color={(index % 5) + 1} />
-          </AppWindow>
+          <div className="hover:opacity-80 transition-opacity h-full">
+            <AppWindow color={(index % 5) + 1}>
+              <h3 className="text-2xl font-bold">{post.title}</h3>
+              <p className="font-mono uppercase text-sm pb-3">
+                {post.author.name} | {new Date(post.date).toLocaleDateString()}
+              </p>
+              {post.excerpt && <p className="pb-3">{post.excerpt}</p>}
+              <Badges tags={post.tags} color={(index % 5) + 1} />
+            </AppWindow>
+          </div>
         </Link>
       ))}
     </div>
@@ -83,9 +82,9 @@ export default function Home() {
               <br />
               CREATE IMPACT.
             </h1>
-            <h2 className="text-2xl mb-3 lowercase text-gray-700">
+            <p className="text-2xl mb-3 lowercase text-gray-700">
               MIT'S FASTEST-GROWING SOFTWARE DEVELOPMENT COMMUNITY.
-            </h2>
+            </p>
             <hr className="text-gray-200" />
             <p className="font-mono py-2 tracking-widest text-gray-300 uppercase">
               &lt;/div&gt;
@@ -94,7 +93,7 @@ export default function Home() {
           <div className="hidden w-full lg:w-1/3 justify-center items-center relative sm:flex">
             <Image
               src="/fullclub2.jpg"
-              alt="Logo"
+              alt="AppDev@MIT team members at demo day"
               width={200}
               height={200}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
@@ -112,8 +111,7 @@ export default function Home() {
             what we do
           </h2>
           <p className="text-2xl mb-3">
-            Our mission is to build web and mobile applications with the goal
-            of:
+            Our mission is to build web and mobile apps with the goal of:
           </p>
           <ul className="list-decimal list-inside text-2xl mb-5 space-y-1">
             <li>
@@ -121,8 +119,8 @@ export default function Home() {
               organizations.
             </li>
             <li>
-              Fostering practical skills in software development, product
-              management, design, and marketing.
+              Fostering practical skills in software engineering, product
+              management, UI/UX design, and marketing.
             </li>
           </ul>
         </AppWindow>
@@ -135,15 +133,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="w-full">
               <div className="flex justify-center mb-8">
-                <Image
-                  src="/mapit.png"
-                  alt="Mapit"
-                  width={375}
-                  height={250}
-                  className="rounded-lg border-1 border-gray-300"
-                />
+                <Link
+                  href="https://mitmapit.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/mapit.png"
+                    alt="MapIT - MIT campus navigation app interface showing room locations"
+                    width={375}
+                    height={250}
+                    className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                </Link>
               </div>
-              <h4 className="text-xl font-semibold">MapIT</h4>
+              <h3 className="text-xl font-semibold">MapIT</h3>
               <p className="text-base font-light">
                 MapIT is a comprehensive campus map that helps you find your way
                 around MIT. It provides room-level search resolution, popular
@@ -155,13 +159,13 @@ export default function Home() {
               <div className="flex justify-center mb-8">
                 <Image
                   src="/fullhouse.png"
-                  alt="Full House"
+                  alt="Full House - MIT student housing and roommate finder application interface"
                   width={375}
                   height={250}
                   className="rounded-lg border-1 border-gray-300"
                 />
               </div>
-              <h4 className="text-xl font-semibold">Full House</h4>
+              <h3 className="text-xl font-semibold">Full House</h3>
               <p className="text-base font-light">
                 Are you looking for summer housing near MIT or your internship?
                 This project will let you find affordable accommodations and
@@ -170,19 +174,26 @@ export default function Home() {
             </div>
             <div className="w-full">
               <div className="flex justify-center mb-8">
-                <Image
-                  src="/clubs.jpg"
-                  alt="Beaver Clubs"
-                  width={375}
-                  height={250}
-                  className="rounded-lg border-1 border-gray-300"
-                />
+                <Link
+                  href="https://mitclubs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/clubs.jpg"
+                    alt="MIT Clubs - browse and filter student organizations interface"
+                    width={375}
+                    height={250}
+                    className="rounded-lg border-1 border-gray-300 hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                </Link>
               </div>
-              <h4 className="text-xl font-semibold">Beaver Clubs</h4>
+              <h3 className="text-xl font-semibold">MIT Clubs</h3>
               <p className="text-base font-light">
-                There are too many clubs and organizations to keep track of.
-                Browse MIT's full list of clubs, and filter by club size, focus,
-                and recruiting status to find your fit.
+                There are too many clubs and organizations to keep track of. MIT
+                Clubs is a directory of all MIT clubs and organizations, with
+                information about each club's focus, recruiting cycle, and
+                recruiting status.
               </p>
             </div>
           </div>
@@ -198,10 +209,13 @@ export default function Home() {
             news and ramblings
           </h2>
           <p className="text-2xl mb-10">
-            announcements, updates, and stories from our members.
+            announcements, updates, and stories from our <Link href="/team" className="text-appdev-teal hover:underline">members</Link>.
           </p>
           <BlogComponent />
-          <Link href="https://appdev-blog.vercel.app" className="flex justify-center mt-10">
+          <Link
+            href="https://appdev-blog.vercel.app"
+            className="flex justify-center mt-10"
+          >
             <button className="bg-appdev-teal text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               Read our blog
             </button>
@@ -242,7 +256,7 @@ export default function Home() {
               <Link href="https://www.convex.dev/" target="_blank">
                 <Image
                   src="/convex-logo.svg"
-                  alt="Convex Logo"
+                  alt="Convex - AppDev@MIT sponsor and real-time database platform"
                   width={350}
                   height={200}
                   className="mx-auto"
@@ -256,7 +270,7 @@ export default function Home() {
               >
                 <Image
                   src="/warp-logo.png"
-                  alt="Warp Logo"
+                  alt="Warp - AppDev@MIT sponsor and AI-powered terminal"
                   width={230}
                   height={200}
                   className="mx-auto"

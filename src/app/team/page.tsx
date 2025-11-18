@@ -1,13 +1,20 @@
-import { developers, exec } from "./members";
+"use client";
+
+import { developers, exec, alumni } from "./members";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import AppWindow from "../components/appwindow";
 import RoleBadges from "../components/rolebadge";
 import Image from "next/image";
 import Link from "next/link";
-import App from "next/app";
+import { useState } from "react";
 
 export default function TeamPage() {
+  const [openAlumni, setOpenAlumni] = useState<string | null>(null);
+
+  const toggleAlumni = (semester: string) => {
+    setOpenAlumni(openAlumni === semester ? null : semester);
+  };
   return (
     <div className="bg-gray-100">
       <Navbar />
@@ -39,7 +46,7 @@ relative sm:flex"
           >
             <Image
               src="/social.jpg"
-              alt="Team"
+              alt="AppDev@MIT team at social event - diverse group of engineers and designers"
               width={400}
               height={400}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
@@ -52,16 +59,14 @@ relative sm:flex"
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
           executive board
         </h2>
-        <p className="text-xl mb-5">
-          Exec manages all initiatives, spanning both technical and business
-          aspects, to keep us growing.
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {exec.map((member) => (
             <AppWindow key={member.name}>
               <Image
                 src={member.imageSrc}
-                alt={member.name}
+                alt={`${member.name} - AppDev@MIT ${member.roles.join(
+                  " and "
+                )} member`}
                 width={200}
                 height={200}
                 className="rounded-full mx-auto mb-4"
@@ -78,9 +83,6 @@ relative sm:flex"
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
           developers
         </h2>
-        <p className="text-xl mb-5">
-          The developers and designers who bring our projects to life.
-        </p>
         <AppWindow>
           <div className="bg-gray-800 p-6 rounded-lg text-white font-mono">
             <p>
@@ -96,6 +98,55 @@ relative sm:flex"
             </div>
           </div>
         </AppWindow>
+
+        <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
+          alumni
+        </h2>
+        {alumni.map((group) => (
+          <div key={group.semester} className="mb-4">
+            <AppWindow>
+              <div className="bg-gray-800 rounded-lg text-white font-mono overflow-hidden">
+                <button
+                  onClick={() => toggleAlumni(group.semester)}
+                  className="w-full p-6 text-left hover:bg-gray-700 transition-colors rounded-lg"
+                >
+                  <p className="flex items-center justify-between">
+                    <span>
+                      <span className="text-appdev-purple">
+                        C:\proj\appdev-at-mit\alumni\
+                        {group.semester.toLowerCase().replace(" ", "-")}&gt;
+                      </span>
+                      <span className="text-appdev-teal"> ls</span>
+                    </span>
+                    <span
+                      className={`text-2xl transition-transform duration-300 ${
+                        openAlumni === group.semester ? "rotate-0" : "rotate-0"
+                      }`}
+                    >
+                      {openAlumni === group.semester ? "-" : "+"}
+                    </span>
+                  </p>
+                </button>
+                <div
+                  className={`transition-all duration-300 ease-in-out ${
+                    openAlumni === group.semester
+                      ? "max-h-[2000px] opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                  style={{
+                    overflow: "hidden",
+                  }}
+                >
+                  <div className="px-6 pb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {group.members.map((person) => (
+                      <p key={person}>{person}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </AppWindow>
+          </div>
+        ))}
         <Link href="/apply" className="flex justify-center mt-10">
           <button className="bg-appdev-green text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
             Join us!
