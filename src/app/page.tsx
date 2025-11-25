@@ -231,6 +231,28 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center items-center space-x-8 md:space-x-12">
             <div>
+              <Link href="https://cmtelematics.com/" target="_blank">
+                <Image
+                  src="/cmt.webp"
+                  alt="Cambridge Mobile Telematics Logo"
+                  width={300}
+                  height={200}
+                  className="mx-auto"
+                />
+              </Link>
+            </div>
+            <div>
+              <Link href="https://citadel.com/" target="_blank">
+                <Image
+                  src="/citadel-logo.png"
+                  alt="Citadel Logo"
+                  width={300}
+                  height={200}
+                  className="mx-auto"
+                />
+              </Link>
+            </div>
+            <div>
               <Link href="https://www.convex.dev/" target="_blank">
                 <Image
                   src="/convex-logo.svg"
