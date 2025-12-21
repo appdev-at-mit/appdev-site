@@ -84,7 +84,7 @@ const developers: string[] = [
   "Akpandu Ekezie",
   "Andy Yu",
   "April Kovacs",
-  "Calista",
+  "Calista Huang",
   "Cindy Lin",
   "Daniel Jiang",
   "David Sevilla",
