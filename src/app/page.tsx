@@ -92,10 +92,10 @@ export default function Home() {
           </div>
           <div className="hidden w-full lg:w-1/3 justify-center items-center relative sm:flex">
             <Image
-              src="/fullclub2.jpg"
+              src="/fullclub.jpg"
               alt="AppDev@MIT team members at demo day"
-              width={200}
-              height={200}
+              width={1000}
+              height={1000}
               className="w-full border rounded-lg shadow-lg shadow-gray-200"
             />
             {/* interesting floating elements */}
