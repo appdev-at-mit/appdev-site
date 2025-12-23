@@ -278,7 +278,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Link href="/products" className="flex justify-center mt-10">
+          <Link href="mailto:fullstack-exec@mit.edu?subject=Sponsorship%20Inquiry" className="flex justify-center mt-10">
             <button className="bg-appdev-purple text-white text-xl mt-5 cursor-pointer hover:brightness-110 w-60 py-2 rounded-full">
               Support us!
             </button>
