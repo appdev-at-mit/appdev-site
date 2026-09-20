@@ -23,4 +23,12 @@ export const featuredProjects = [
     imageUrl: "/clubs.jpg",
     team: "An Dinh, Anna Li, Bhadra Rupesh, Hailey Pan, Justin Le, Srilekha Mamidala, Victoria Park, Kara Chou, Samantha Shih",
   },
+  {
+    title: "UROP Search Engine",
+    description:
+      "A full-stack search and discovery platform for MIT Undergraduate Research Opportunities (UROP), scraping live listings from ELx and ranking them against a student's resume. Search and filter hundreds of opportunities by department, lab, pay/credit type, and theme, get personalized recommendations from a TF-IDF + LSA resume-matching engine, browse a curated labs directory, and log in with Google OAuth gated to @mit.edu accounts.",
+    link: "https://miturop.org/",
+    imageUrl: "/uropsearch.png",
+    team: "Nyan Lin Htet, Alyssa Liu, Neha Sane",
+  },
 ];

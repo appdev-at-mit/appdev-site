@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     "mit club database",
     "mit housing finder",
     "mit summer housing",
+    "mit urop",
+    "mit urop search",
+    "mit undergraduate research opportunities",
+    "mit research opportunities",
   ],
 };
 
