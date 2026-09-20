@@ -9,8 +9,6 @@ Our mission is to build web and mobile apps with the goal of:
 - Serving students, campus groups, and local businesses and organizations.
 - Fostering practical skills in software engineering, product management, UI/UX design, and marketing.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Products
 
 Featured on the [products page](https://www.mitappdev.com/products):
