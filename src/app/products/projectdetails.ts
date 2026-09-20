@@ -26,7 +26,7 @@ export const featuredProjects = [
   {
     title: "UROP Search Engine",
     description:
-      "A full-stack search and discovery platform for MIT Undergraduate Research Opportunities (UROP), scraping live listings from ELx and ranking them against a student's resume. Search and filter hundreds of opportunities by department, lab, pay/credit type, and theme, get personalized recommendations from a TF-IDF + LSA resume-matching engine, browse a curated labs directory, and log in with Google OAuth gated to @mit.edu accounts.",
+      "A search and discovery platform for MIT UROP listings, matching opportunities to your resume so you can find the research that fits you best.",
     link: "https://miturop.org/",
     imageUrl: "/uropsearch.png",
     team: "Nyan Lin Htet, Alyssa Liu, Neha Sane",
