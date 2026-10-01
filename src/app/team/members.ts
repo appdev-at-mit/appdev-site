@@ -20,7 +20,7 @@ const exec: TeamMember[] = [
   },
   {
     name: "Nicole Zheng",
-    roles: ["Marketing Chair", "Webmaster"],
+    roles: ["Marketing Chair", "Webmaster", "ML Engineer", "UI/UX Designer"],
     year: "2029",
     imageSrc: "/people/nicole-zheng.jpg",
   },
