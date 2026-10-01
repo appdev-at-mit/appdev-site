@@ -19,6 +19,12 @@ const exec: TeamMember[] = [
     imageSrc: "/people/amy-lin.png",
   },
   {
+    name: "Nicole Zheng",
+    roles: ["Marketing Chair", "Webmaster"],
+    year: "2029",
+    imageSrc: "/people/nicole-zheng.jpg",
+  },
+  {
     name: "Rebecca Xiong",
     roles: ["Finance Chair", "Outreach Chair"],
     year: "2028",
@@ -32,6 +38,7 @@ const exec: TeamMember[] = [
   },
   {
     name: "Jany Zhang",
+    year: "2030",
     roles: ["Outreach Chair"],
     imageSrc: "/people/temp-pic.jpg",
   },
@@ -42,19 +49,33 @@ const exec: TeamMember[] = [
     imageSrc: "/people/sanchali-banerjee.jpeg",
   },
   {
-    name: "Nicole Zheng",
-    roles: ["Marketing Chair", "Webmaster"],
+    name: "Nyan Lin Htet",
+    roles: ["Team Lead"],
+    year: "2028",
+    imageSrc: "/people/nyan-lin-htet.png",
+  },
+  {
+    name: "Fela Ralte",
+    roles: ["Team Lead"],
+    year: "2028",
+    imageSrc: "/people/fela-ralte.png",
+  },
+  {
+    name: "Elisa Zhang",
+    roles: ["Team Lead"],
     year: "2029",
-    imageSrc: "/people/nicole-zheng.jpg",
+    imageSrc: "/people/elisa-zhang.png",
   },
   {
     name: "Sophia Chen",
     roles: ["Team Lead"],
+    year: "2030",
     imageSrc: "/people/sophia-chen.png",
   },
   {
     name: "Kaemyn Brown",
     roles: ["Team Lead"],
+    year: "2030",
     imageSrc: "/people/kaemyn-brown.png",
   },
   {
@@ -78,23 +99,8 @@ const exec: TeamMember[] = [
   {
     name: "Angelina Li",
     roles: ["Team Lead"],
+    year: "2030",
     imageSrc: "/people/angelina-li.png",
-  },
-  {
-    name: "Nyan Lin Htet",
-    roles: ["Team Lead"],
-    year: "2028",
-    imageSrc: "/people/nyan-lin-htet.png",
-  },
-  {
-    name: "Elisa Zhang",
-    roles: ["Team Lead"],
-    imageSrc: "/people/elisa-zhang.png",
-  },
-  {
-    name: "Fela Ralte",
-    roles: ["Team Lead"],
-    imageSrc: "/people/fela-ralte.png",
   },
   {
     name: "Hailey Pan",
