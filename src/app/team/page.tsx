@@ -1,6 +1,6 @@
 "use client";
 
-import { developers, exec, alumni } from "./members";
+import { exec, alumni } from "./members";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import AppWindow from "../components/appwindow";
@@ -73,7 +73,12 @@ relative sm:flex"
               />
               <h3 className="text-xl font-semibold mb-3">
                 {member.name}{" "}
-                <span className="text-gray-300"> / Class of {member.year}</span>
+                {member.year && (
+                  <span className="text-gray-300">
+                    {" "}
+                    / Class of {member.year}
+                  </span>
+                )}
               </h3>
               <RoleBadges roles={member.roles} />
             </AppWindow>
@@ -91,11 +96,10 @@ relative sm:flex"
               </span>
               <span className="text-appdev-teal"> ls</span>
             </p>
-            <div className="grid grid-cols-1 mt-3 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {developers.map((dev) => (
-                <p key={dev}>{dev}</p>
-              ))}
-            </div>
+            <p className="mt-3 text-gray-400">
+              loading fall 2026 developers
+              <span className="animate-pulse">...</span>
+            </p>
           </div>
         </AppWindow>
 
@@ -114,7 +118,7 @@ relative sm:flex"
                     <span>
                       <span className="text-appdev-purple">
                         C:\proj\appdev-at-mit\alumni\
-                        {group.semester.toLowerCase().replace(" ", "-")}&gt;
+                        {group.semester.toLowerCase().replace(/\s+/g, "-")}&gt;
                       </span>
                       <span className="text-appdev-teal"> ls</span>
                     </span>

@@ -1,40 +1,39 @@
 interface TeamMember {
   name: string;
   roles: string[];
-  year: string;
+  year?: string;
   imageSrc: string;
 }
 
 const exec: TeamMember[] = [
   {
-    name: "Josie Wang",
-    roles: ["Co-President", "Backend Engineer", "Frontend Engineer"],
-    year: "2027",
-    imageSrc: "/people/josie-wang.jpg",
+    name: "Samantha Shih",
+    roles: ["Co-President", "Frontend Engineer", "Backend Engineer"],
+    year: "2028",
+    imageSrc: "/people/samantha-shih.jpg",
   },
   {
-    name: "Eric Zhan",
-    roles: ["Co-President", "Backend Engineer", "Frontend Engineer"],
-    year: "2028",
-    imageSrc: "/people/eric-zhan.jpg",
+    name: "Amy Lin",
+    roles: ["Co-President"],
+    year: "2029",
+    imageSrc: "/people/amy-lin.png",
   },
   {
     name: "Rebecca Xiong",
-    roles: ["Finance Chair", "Business/Marketing"],
+    roles: ["Finance Chair", "Outreach Chair"],
     year: "2028",
     imageSrc: "/people/rebecca-xiong.jpg",
   },
   {
-    name: "Jieruei Chang",
-    roles: ["Webmaster", "Team Lead", "Backend Engineer", "Frontend Engineer"],
+    name: "Bridget Jiang",
+    roles: ["Outreach Chair"],
     year: "2028",
-    imageSrc: "/people/jieruei-chang.png",
+    imageSrc: "/people/bridget-jiang.jpg",
   },
   {
-    name: "Michelle Han",
+    name: "Jany Zhang",
     roles: ["Outreach Chair"],
-    year: "2029",
-    imageSrc: "/people/michelle-han.jpg",
+    imageSrc: "/people/temp-pic.jpg",
   },
   {
     name: "Sanchali Banerjee",
@@ -43,34 +42,59 @@ const exec: TeamMember[] = [
     imageSrc: "/people/sanchali-banerjee.jpeg",
   },
   {
-    name: "Leena Dudi",
-    roles: ["Marketing Chair"],
-    year: "2029",
-    imageSrc: "/people/leena-dudi.png",
-  },
-  {
     name: "Nicole Zheng",
-    roles: ["Marketing Chair"],
+    roles: ["Marketing Chair", "Webmaster"],
     year: "2029",
     imageSrc: "/people/nicole-zheng.jpg",
   },
   {
-    name: "An Dinh",
-    roles: ["Team Lead", "Backend Engineer", "Frontend Engineer"],
-    year: "2027",
-    imageSrc: "/people/an-dinh.jpeg",
+    name: "Sophia Chen",
+    roles: ["Team Lead"],
+    imageSrc: "/people/sophia-chen.png",
   },
   {
-    name: "Samantha Shih",
-    roles: ["Team Lead", "Frontend Engineer"],
-    year: "2028",
-    imageSrc: "/people/samantha-shih.jpg",
+    name: "Kaemyn Brown",
+    roles: ["Team Lead"],
+    imageSrc: "/people/kaemyn-brown.png",
   },
   {
-    name: "Bridget Jiang",
+    name: "Pedro Villafranco",
+    roles: ["Team Lead"],
+    year: "2030",
+    imageSrc: "/people/pedro-villafranco.png",
+  },
+  {
+    name: "Aryan Raj",
+    roles: ["Team Lead"],
+    year: "2030",
+    imageSrc: "/people/aryan-raj.png",
+  },
+  {
+    name: "Said Azaizah",
+    roles: ["Team Lead"],
+    year: "2030",
+    imageSrc: "/people/said-azaizah.png",
+  },
+  {
+    name: "Angelina Li",
+    roles: ["Team Lead"],
+    imageSrc: "/people/angelina-li.png",
+  },
+  {
+    name: "Nyan Lin Htet",
     roles: ["Team Lead"],
     year: "2028",
-    imageSrc: "/people/bridget-jiang.jpg",
+    imageSrc: "/people/nyan-lin-htet.png",
+  },
+  {
+    name: "Elisa Zhang",
+    roles: ["Team Lead"],
+    imageSrc: "/people/elisa-zhang.png",
+  },
+  {
+    name: "Fela Ralte",
+    roles: ["Team Lead"],
+    imageSrc: "/people/fela-ralte.png",
   },
   {
     name: "Hailey Pan",
@@ -81,32 +105,14 @@ const exec: TeamMember[] = [
 ];
 
 const developers: string[] = [
-  "Akpandu Ekezie",
-  "Andy Yu",
-  "April Kovacs",
-  "Calista Huang",
-  "Cindy Lin",
-  "Daniel Jiang",
-  "David Sevilla",
-  "Elisa Zhang",
-  "Ellie Feng",
-  "Emma Li",
-  "Harrison Liang",
-  "Isabelle Chan",
-  "Jada Ogueh",
-  "Jerry Zhang",
-  "Joanna Liu",
-  "Katherine Wang",
-  "Lucy Sun",
-  "Maria Taveras",
-  "Mohamed Algraiw",
-  "Peter Lin",
-  "Rahsun Komatsuzaki-Fields",
-  "Robert Chondro",
-  "Shelly Yang",
-  "Thinh Pham",
-  "Victoria Ou",
-  "Yolanda Hu",
+  "Adrian Johnson",
+  "Alyssa Chu",
+  "Carys Chan",
+  "Claire Mao",
+  "Connie Chen",
+  "Jerry Chen",
+  "Kelvin La",
+  "Nicole Zheng",
 ];
 
 interface AlumniGroup {
@@ -115,6 +121,42 @@ interface AlumniGroup {
 }
 
 const alumni: AlumniGroup[] = [
+  {
+    semester: "Fall 2025 & Spring 2026",
+    members: [
+      "Akpandu Ekezie",
+      "An Dinh",
+      "Andy Yu",
+      "April Kovacs",
+      "Calista Huang",
+      "Cindy Lin",
+      "Daniel Jiang",
+      "David Sevilla",
+      "Ellie Feng",
+      "Emma Li",
+      "Eric Zhan",
+      "Harrison Liang",
+      "Isabelle Chan",
+      "Jada Ogueh",
+      "Jerry Zhang",
+      "Jieruei Chang",
+      "Joanna Liu",
+      "Josie Wang",
+      "Katherine Wang",
+      "Leena Dudi",
+      "Lucy Sun",
+      "Maria Taveras",
+      "Michelle Han",
+      "Mohamed Algraiw",
+      "Peter Lin",
+      "Rahsun Komatsuzaki-Fields",
+      "Robert Chondro",
+      "Shelly Yang",
+      "Thinh Pham",
+      "Victoria Ou",
+      "Yolanda Hu",
+    ],
+  },
   {
     semester: "Spring 2025",
     members: [
