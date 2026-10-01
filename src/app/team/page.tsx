@@ -69,7 +69,7 @@ relative sm:flex"
                 )} member`}
                 width={200}
                 height={200}
-                className="rounded-full mx-auto mb-4"
+                className="w-48 h-48 aspect-square object-cover rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold mb-3">
                 {member.name}{" "}
