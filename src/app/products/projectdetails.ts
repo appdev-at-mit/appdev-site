@@ -5,15 +5,7 @@ export const featuredProjects = [
       "A comprehensive navigation tool designed to help you explore and discover MIT's campus with ease.",
     link: "https://mitmapit.org",
     imageUrl: "/mapit.png",
-    team: "Alexander Liang, Bhadra Rupesh, Eric Zhan, Grant Hu, Hailey Pan, Jieruei Chang, Jocelyn Zheng, Kao Anchaleenukoon, Samantha Shih",
-  },
-  {
-    title: "Full House",
-    description:
-      "Are you looking for summer housing near MIT or your internship? This project will let you find affordable accommodations and connect you with other MIT students living in the same area.",
-    link: "",
-    imageUrl: "/fullhouse.png",
-    team: "Eric Zhan, Jack MarionSims, Jennet Zamanova, Josie Wang, Peter Lin, Rahsun Komatsuzaki-Fields, Smruti Patil",
+    team: "Alexander Liang, Bhadra Rupesh, Eric Zhan, Grant Hu, Hailey Pan, Jieruei Chang, Jocelyn Zheng, Kao Anchaleenukoon, Samantha Shih, Nicole Zheng",
   },
   {
     title: "MIT Clubs",
@@ -30,5 +22,16 @@ export const featuredProjects = [
     link: "https://miturop.org/",
     imageUrl: "/uropsearch.png",
     team: "Nyan Lin Htet, Alyssa Liu, Neha Sane",
+  },
+];
+
+export const archivedProjects = [
+  {
+    title: "Full House",
+    description:
+      "Are you looking for summer housing near MIT or your internship? This project will let you find affordable accommodations and connect you with other MIT students living in the same area.",
+    link: "",
+    imageUrl: "/fullhouse.png",
+    team: "Eric Zhan, Jack MarionSims, Jennet Zamanova, Josie Wang, Peter Lin, Rahsun Komatsuzaki-Fields, Smruti Patil",
   },
 ];

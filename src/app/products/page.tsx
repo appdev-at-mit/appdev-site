@@ -1,10 +1,12 @@
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import AppWindow from "@/app/components/appwindow";
-import { featuredProjects } from "./projectdetails";
+import { featuredProjects, archivedProjects } from "./projectdetails";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+
+type Project = (typeof featuredProjects)[number];
 
 export const metadata: Metadata = {
   title: "Our Products",
@@ -74,46 +76,56 @@ export default function ProductsPage() {
           featured projects
         </h2>
         {featuredProjects.map((project) => (
-          <div key={project.title}>
-            <AppWindow>
-              <div className="md:flex justify-center mb-5">
-                <div className="w-full lg:w-1/2 mb-5 md:pr-5">
-                  <h3 className="text-3xl font-semibold mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-xl mb-5">{project.description}</p>
-                  <p className="text-xl text-gray-500 mb-5">{project.team}</p>
-                  {project.link && (
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="bg-appdev-blue text-white text-lg cursor-pointer hover:brightness-110 px-6 py-2 rounded-full">
-                        Try it out!
-                      </button>
-                    </Link>
-                  )}
-                </div>
-                <div className="w-full lg:w-1/2 justify-center items-center">
-                  <Image
-                    src={project.imageUrl}
-                    alt={`${project.title} - ${project.description.substring(
-                      0,
-                      100
-                    )}...`}
-                    width={400}
-                    height={400}
-                    className="rounded-lg border-1 border-gray-300 w-full"
-                  />
-                </div>
-              </div>
-            </AppWindow>
-            <div className="mt-10"></div>
-          </div>
+          <ProjectCard key={project.title} project={project} />
+        ))}
+        <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
+          archive
+        </h2>
+        {archivedProjects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
         <Footer />
       </div>
+    </div>
+  );
+}
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div>
+      <AppWindow>
+        <div className="md:flex justify-center mb-5">
+          <div className="w-full lg:w-1/2 mb-5 md:pr-5">
+            <h3 className="text-3xl font-semibold mb-3">{project.title}</h3>
+            <p className="text-xl mb-5">{project.description}</p>
+            <p className="text-xl text-gray-500 mb-5">{project.team}</p>
+            {project.link && (
+              <Link
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-appdev-blue text-white text-lg cursor-pointer hover:brightness-110 px-6 py-2 rounded-full">
+                  Try it out!
+                </button>
+              </Link>
+            )}
+          </div>
+          <div className="w-full lg:w-1/2 justify-center items-center">
+            <Image
+              src={project.imageUrl}
+              alt={`${project.title} - ${project.description.substring(
+                0,
+                100,
+              )}...`}
+              width={400}
+              height={400}
+              className="rounded-lg border-1 border-gray-300 w-full"
+            />
+          </div>
+        </div>
+      </AppWindow>
+      <div className="mt-10"></div>
     </div>
   );
 }
