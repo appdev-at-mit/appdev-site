@@ -79,7 +79,7 @@ export default function ProductsPage() {
           <ProjectCard key={project.title} project={project} />
         ))}
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
-          archive
+          archived projects
         </h2>
         {archivedProjects.map((project) => (
           <ProjectCard key={project.title} project={project} />
