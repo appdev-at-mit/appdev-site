@@ -95,7 +95,9 @@ function ProjectCard({ project }: { project: Project }) {
     <div>
       <AppWindow>
         <div className="md:flex justify-center mb-5">
-          <div className="w-full lg:w-1/2 mb-5 md:pr-5">
+          <div
+            className={`w-full mb-5 ${project.imageUrl ? "lg:w-1/2 md:pr-5" : ""}`}
+          >
             <h3 className="text-3xl font-semibold mb-3">{project.title}</h3>
             <p className="text-xl mb-5">{project.description}</p>
             <p className="text-xl text-gray-500 mb-5">{project.team}</p>
@@ -111,18 +113,20 @@ function ProjectCard({ project }: { project: Project }) {
               </Link>
             )}
           </div>
-          <div className="w-full lg:w-1/2 justify-center items-center">
-            <Image
-              src={project.imageUrl}
-              alt={`${project.title} - ${project.description.substring(
-                0,
-                100,
-              )}...`}
-              width={400}
-              height={400}
-              className="rounded-lg border-1 border-gray-300 w-full"
-            />
-          </div>
+          {project.imageUrl && (
+            <div className="w-full lg:w-1/2 justify-center items-center">
+              <Image
+                src={project.imageUrl}
+                alt={`${project.title} - ${project.description.substring(
+                  0,
+                  100,
+                )}...`}
+                width={400}
+                height={400}
+                className="rounded-lg border-1 border-gray-300 w-full"
+              />
+            </div>
+          )}
         </div>
       </AppWindow>
       <div className="mt-10"></div>

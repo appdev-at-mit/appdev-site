@@ -1,6 +1,6 @@
 "use client";
 
-import { exec, developers, alumni } from "./members";
+import { exec, developers, pastTeams } from "./members";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import AppWindow from "../components/appwindow";
@@ -10,10 +10,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function TeamPage() {
-  const [openAlumni, setOpenAlumni] = useState<string | null>(null);
+  const [openTeam, setOpenTeam] = useState<string | null>(null);
 
-  const toggleAlumni = (semester: string) => {
-    setOpenAlumni(openAlumni === semester ? null : semester);
+  const toggleTeam = (semester: string) => {
+    setOpenTeam(openTeam === semester ? null : semester);
   };
   return (
     <div className="bg-gray-100">
@@ -105,36 +105,36 @@ relative sm:flex"
         </AppWindow>
 
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
-          alumni
+          past teams
         </h2>
-        {alumni.map((group) => (
+        {pastTeams.map((group) => (
           <div key={group.semester} className="mb-4">
             <AppWindow>
               <div className="bg-gray-800 rounded-lg text-white font-mono overflow-hidden">
                 <button
-                  onClick={() => toggleAlumni(group.semester)}
+                  onClick={() => toggleTeam(group.semester)}
                   className="w-full p-6 text-left hover:bg-gray-700 transition-colors rounded-lg"
                 >
                   <p className="flex items-center justify-between">
                     <span>
                       <span className="text-appdev-purple">
-                        C:\proj\appdev-at-mit\alumni\
+                        C:\proj\appdev-at-mit\past-teams\
                         {group.semester.toLowerCase().replace(/\s+/g, "-")}&gt;
                       </span>
                       <span className="text-appdev-teal"> ls</span>
                     </span>
                     <span
                       className={`text-2xl transition-transform duration-300 ${
-                        openAlumni === group.semester ? "rotate-0" : "rotate-0"
+                        openTeam === group.semester ? "rotate-0" : "rotate-0"
                       }`}
                     >
-                      {openAlumni === group.semester ? "-" : "+"}
+                      {openTeam === group.semester ? "-" : "+"}
                     </span>
                   </p>
                 </button>
                 <div
                   className={`transition-all duration-300 ease-in-out ${
-                    openAlumni === group.semester
+                    openTeam === group.semester
                       ? "max-h-[2000px] opacity-100"
                       : "max-h-0 opacity-0"
                   }`}

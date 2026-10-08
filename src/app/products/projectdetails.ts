@@ -34,4 +34,12 @@ export const archivedProjects = [
     imageUrl: "/fullhouse.png",
     team: "Eric Zhan, Jack MarionSims, Jennet Zamanova, Josie Wang, Peter Lin, Rahsun Komatsuzaki-Fields, Smruti Patil",
   },
+  {
+    title: "DormPop",
+    description:
+      "A campus marketplace for buying and selling secondhand clothes and dorm finds. Browse listings, filter by type, color, and price, and arrange pickup or a try-on with the seller.",
+    link: "",
+    imageUrl: "",
+    team: "Angela Yang, Carys Chan, Connie Chen, Giovanni Avila, Jing Lin, Serena Lu",
+  },
 ];
