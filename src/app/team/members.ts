@@ -8,7 +8,7 @@ interface TeamMember {
 const exec: TeamMember[] = [
   {
     name: "Samantha Shih",
-    roles: ["Co-President", "Frontend Engineer", "Backend Engineer"],
+    roles: ["Co-President"],
     year: "2028",
     imageSrc: "/people/samantha-shih.jpg",
   },
@@ -20,7 +20,7 @@ const exec: TeamMember[] = [
   },
   {
     name: "Nicole Zheng",
-    roles: ["Marketing Chair", "Webmaster", "ML Engineer", "UI/UX Designer"],
+    roles: ["Marketing Chair", "Webmaster"],
     year: "2029",
     imageSrc: "/people/nicole-zheng.jpg",
   },
@@ -111,14 +111,23 @@ const exec: TeamMember[] = [
 ];
 
 const developers: string[] = [
-  "Adrian Johnson",
   "Alyssa Chu",
+  "Amelia Haller",
+  "Amy Kuang",
+  "Anna Nguyen",
   "Carys Chan",
-  "Claire Mao",
-  "Connie Chen",
-  "Jerry Chen",
+  "Ekam Kaur",
+  "Ellie Strano",
+  "Erick Chen",
+  "Jack Zhou",
+  "Jany Zhang",
+  "Jay Suarez Vanderpol",
+  "Jovian Soejono",
   "Kelvin La",
+  "Marina Awad",
+  "Natalia Arias",
   "Nicole Zheng",
+  "Salim Siraj",
 ];
 
 interface AlumniGroup {
