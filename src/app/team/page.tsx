@@ -86,13 +86,13 @@ relative sm:flex"
         </div>
 
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
-          developers
+          development team
         </h2>
         <AppWindow>
           <div className="bg-gray-800 p-6 rounded-lg text-white font-mono">
             <p>
               <span className="text-appdev-purple">
-                C:\proj\appdev-at-mit\developers&gt;
+                C:\proj\appdev-at-mit\development-team&gt;
               </span>
               <span className="text-appdev-teal"> ls</span>
             </p>
@@ -105,7 +105,7 @@ relative sm:flex"
         </AppWindow>
 
         <h2 className="text-5xl mt-20 mb-5 font-semibold text-gray-700">
-          past teams
+          commit history
         </h2>
         {pastTeams.map((group) => (
           <div key={group.semester} className="mb-4">
@@ -118,7 +118,7 @@ relative sm:flex"
                   <p className="flex items-center justify-between">
                     <span>
                       <span className="text-appdev-purple">
-                        C:\proj\appdev-at-mit\past-teams\
+                        C:\proj\appdev-at-mit\commit-history\
                         {group.semester.toLowerCase().replace(/\s+/g, "-")}&gt;
                       </span>
                       <span className="text-appdev-teal"> ls</span>

@@ -48,12 +48,12 @@ const exec: TeamMember[] = [
     year: "2029",
     imageSrc: "/people/sanchali-banerjee.jpeg",
   },
-  {
-    name: "Nyan Lin Htet",
-    roles: ["Team Lead"],
-    year: "2028",
-    imageSrc: "/people/nyan-lin-htet.png",
-  },
+  // {
+  //   name: "Nyan Lin Htet",
+  //   roles: ["Team Lead"],
+  //   year: "2028",
+  //   imageSrc: "/people/nyan-lin-htet.png",
+  // },
   {
     name: "Fela Ralte",
     roles: ["Team Lead"],
@@ -112,7 +112,6 @@ const exec: TeamMember[] = [
 
 const developers: string[] = [
   "Alyssa Chu",
-  "Amelia Haller",
   "Amy Kuang",
   "Angelina Li",
   "Anna Nguyen",
