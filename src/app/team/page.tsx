@@ -1,6 +1,6 @@
 "use client";
 
-import { exec, alumni } from "./members";
+import { exec, developers, alumni } from "./members";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import AppWindow from "../components/appwindow";
@@ -96,10 +96,11 @@ relative sm:flex"
               </span>
               <span className="text-appdev-teal"> ls</span>
             </p>
-            <p className="mt-3 text-gray-400">
-              loading fall 2026 developers
-              <span className="animate-pulse">...</span>
-            </p>
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {developers.map((person) => (
+                <p key={person}>{person}</p>
+              ))}
+            </div>
           </div>
         </AppWindow>
 
