@@ -35,6 +35,14 @@ export const archivedProjects = [
     team: "Eric Zhan, Jack MarionSims, Jennet Zamanova, Josie Wang, Peter Lin, Rahsun Komatsuzaki-Fields, Smruti Patil",
   },
   {
+    title: "Typynb",
+    description:
+      "A VS Code tool that brings TypeScript-style type checking to Python notebooks. It helps machine learning developers catch tensor shape, data type, and device errors as they write code (before running it), and converts annotated notebooks into regular Python.",
+    link: "",
+    imageUrl: "",
+    team: "Samantha Shih, Amy Lin, Mohamed Algraiw, Elisa Zhang, Megan Campbell, Robert Chondro, Thinh Pham, Jerry Zhang, Peter Lin",
+  },
+  {
     title: "DormPop",
     description:
       "A campus marketplace for buying and selling secondhand clothes and dorm finds. Browse listings, filter by type, color, and price, and arrange pickup or a try-on with the seller.",
