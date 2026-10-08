@@ -5,7 +5,7 @@ export const featuredProjects = [
       "A comprehensive navigation tool designed to help you explore and discover MIT's campus with ease.",
     link: "https://mitmapit.org",
     imageUrl: "/mapit.png",
-    team: "Alexander Liang, Bhadra Rupesh, Eric Zhan, Grant Hu, Hailey Pan, Jieruei Chang, Jocelyn Zheng, Kao Anchaleenukoon, Samantha Shih, Nicole Zheng",
+    team: "Alexander Liang, Bhadra Rupesh, Eric Zhan, Grant Hu, Hailey Pan, Jieruei Chang, Jocelyn Zheng, Kao Anchaleenukoon, Nicole Zheng, Samantha Shih",
   },
   {
     title: "MIT Clubs",
